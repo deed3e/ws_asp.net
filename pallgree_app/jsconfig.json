@@ -1,5 +1,6 @@
 {
   "ConnectionStrings": {
-    "StudentConStr": "server=DESKTOP-9P11RDC; database=pallgree_cafe; user=sa; password=123456"
+    "StudentConStr": "server=DESKTOP-9P11RDC; database=pallgree_cafe; user=sa; password=123456",
+    "SaltHash": "salt"
   }
 }

@@ -1,6 +1,6 @@
 ﻿namespace pallgree_app.Views
 {
-    partial class Register
+    partial class Employee
     {
         /// <summary>
         /// Required designer variable.
@@ -73,7 +73,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(291, 39);
             this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -119,7 +118,7 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Danh sách nhân viên hiện có";
             // 
-            // Register
+            // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,8 +132,9 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Register";
-            this.Text = "Register";
+            this.Name = "Employee";
+            this.Text = "Employee";
+            this.Load += new System.EventHandler(this.Employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

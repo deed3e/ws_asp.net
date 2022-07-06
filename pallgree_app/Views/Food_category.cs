@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace pallgree_app.Views
 {
-    public partial class Register : Form
+    public partial class Food_category : Form
     {
-        public Register()
+        public Food_category()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

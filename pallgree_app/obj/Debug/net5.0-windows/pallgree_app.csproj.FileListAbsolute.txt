@@ -1,0 +1,12 @@
+C:\Users\Pallgree\Desktop\ws_asp.net\pallgree_app\obj\Debug\net5.0-windows\pallgree_app.csproj.AssemblyReference.cache
+C:\Users\Pallgree\Desktop\ws_asp.net\pallgree_app\obj\Debug\net5.0-windows\pallgree_app.Properties.Resources.resources
+C:\Users\Pallgree\Desktop\ws_asp.net\pallgree_app\obj\Debug\net5.0-windows\pallgree_app.Views.Employee.resources
+C:\Users\Pallgree\Desktop\ws_asp.net\pallgree_app\obj\Debug\net5.0-windows\pallgree_app.Views.Food_category.resources
+C:\Users\Pallgree\Desktop\ws_asp.net\pallgree_app\obj\Debug\net5.0-windows\pallgree_app.Views.Home.resources
+C:\Users\Pallgree\Desktop\ws_asp.net\pallgree_app\obj\Debug\net5.0-windows\pallgree_app.Views.Home_admin.resources
+C:\Users\Pallgree\Desktop\ws_asp.net\pallgree_app\obj\Debug\net5.0-windows\pallgree_app.Login.resources
+C:\Users\Pallgree\Desktop\ws_asp.net\pallgree_app\obj\Debug\net5.0-windows\pallgree_app.csproj.GenerateResource.cache
+C:\Users\Pallgree\Desktop\ws_asp.net\pallgree_app\obj\Debug\net5.0-windows\pallgree_app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pallgree\Desktop\ws_asp.net\pallgree_app\obj\Debug\net5.0-windows\pallgree_app.AssemblyInfoInputs.cache
+C:\Users\Pallgree\Desktop\ws_asp.net\pallgree_app\obj\Debug\net5.0-windows\pallgree_app.AssemblyInfo.cs
+C:\Users\Pallgree\Desktop\ws_asp.net\pallgree_app\obj\Debug\net5.0-windows\pallgree_app.csproj.CoreCompileInputs.cache

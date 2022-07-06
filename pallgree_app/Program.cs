@@ -8,6 +8,7 @@ namespace pallgree_app
 {
     internal static class Program
     {
+        static ApplicationContext MainContext = new ApplicationContext();
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -17,7 +18,18 @@ namespace pallgree_app
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            MainContext.MainForm = new Login();
+            Application.Run(MainContext);
         }
+        public static void SetMainForm(Form MainForm)
+        {
+            MainContext.MainForm = MainForm;
+        }
+
+        public static void ShowMainForm()
+        {
+            MainContext.MainForm.Show();
+        }
+
     }
 }
