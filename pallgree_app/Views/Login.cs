@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
-using pallgree.Logic;
+using pallgree_app.Logics;
 using pallgree_app.Models;
 using pallgree_app.Views;
 using System;

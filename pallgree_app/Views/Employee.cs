@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
-using pallgree.Logic;
+using pallgree_app.Logics;
 using pallgree_app.Models;
 using System;
 using System.Collections.Generic;
@@ -42,9 +42,10 @@ namespace pallgree_app.Views
                     context.Accounts.Add(account);
                     context.SaveChanges();
                 }
-                catch (Exception ex)
+                catch
                 {
                     MessageBox.Show("Username exited");
+                    return;
                 }
 
 
@@ -53,21 +54,56 @@ namespace pallgree_app.Views
             loadDGV();
         }
 
-        public void loadDGV() {
+        public void loadDGV()
+        {
             List<Account> list;
             using (var context = new pallgree_cafeContext())
             {
                 list = context.Accounts.ToList();
-                dataGridView1.DataSource = list;
-                                           
+                dataGridView1.DataSource = list.Select(x => new { x.DisplayName, x.Username, x.Role, x.Status }).ToList();
+
 
             }
+
         }
 
         private void Employee_Load(object sender, EventArgs e)
         {
+            DataGridViewButtonColumn deleteCol = new DataGridViewButtonColumn();
+            deleteCol.Name = "deleteCol";
+            deleteCol.Text = "DeActive";
+            deleteCol.Width = 120;
+            deleteCol.UseColumnTextForButtonValue = true;
+            dataGridView1.Columns.Add(deleteCol);
+            loadDGV();
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
+            if (dataGridView1.Columns[e.ColumnIndex].Name.Equals("deleteCol"))
+            {
+                using (var context = new pallgree_cafeContext())
+                {
+                    List<Account> list = context.Accounts.ToList();
+                    context.Accounts.ToList().ForEach(x =>
+                    {
+                        if (x.Username == list[e.RowIndex].Username)
+                        {
+                            if(x.Status==1)
+                            x.Status = 0;
+                            else x.Status = 1;
+                            context.Accounts.Update(x);
+                            MessageBox.Show($"Change status success for: {x.Username}");
+                        }
+
+                    });
+                    context.SaveChanges();
+                }
+
+            }
             loadDGV();
         }
     }
 }
-

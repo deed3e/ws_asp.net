@@ -1,9 +1,8 @@
-﻿
-using System;
+﻿using System;
 using System.Text;
 using XSystem.Security.Cryptography;
 
-namespace pallgree.Logic
+namespace pallgree_app.Logics
 {
     public class Crypto
     {

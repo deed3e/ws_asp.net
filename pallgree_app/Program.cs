@@ -1,3 +1,4 @@
+using pallgree_app.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,8 @@ namespace pallgree_app
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            MainContext.MainForm = new Login();
+            //MainContext.MainForm = new Login();
+            MainContext.MainForm = new Home_admin();
             Application.Run(MainContext);
         }
         public static void SetMainForm(Form MainForm)
