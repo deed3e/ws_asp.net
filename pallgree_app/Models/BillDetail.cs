@@ -11,6 +11,5 @@ namespace pallgree_app.Models
         public int IdBill { get; set; }
         public int IdFood { get; set; }
         public int? Count { get; set; }
-        public int? Total { get; set; }
     }
 }

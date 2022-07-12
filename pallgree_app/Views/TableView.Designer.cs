@@ -70,6 +70,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "TableView";
             this.Text = "Table Amount";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TableView_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

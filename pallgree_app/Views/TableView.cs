@@ -40,5 +40,10 @@ namespace pallgree_app.Views
                 this.Close();
             }else MessageBox.Show("New amount need > current amount");
         }
+
+        private void TableView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }

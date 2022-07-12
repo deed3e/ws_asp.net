@@ -78,7 +78,10 @@ namespace pallgree_app.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.EmployeeCheckout).HasColumnName("employee_checkout");
+                entity.Property(e => e.EmployeeCheckout)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("employee_checkout");
 
                 entity.Property(e => e.IdTable).HasColumnName("id_table");
 
@@ -91,6 +94,8 @@ namespace pallgree_app.Models
                 entity.Property(e => e.TimeCheckout)
                     .HasColumnType("date")
                     .HasColumnName("time_checkout");
+
+                entity.Property(e => e.Total).HasColumnName("total");
             });
 
             modelBuilder.Entity<BillDetail>(entity =>
@@ -104,8 +109,6 @@ namespace pallgree_app.Models
                 entity.Property(e => e.IdBill).HasColumnName("id_bill");
 
                 entity.Property(e => e.IdFood).HasColumnName("id_food");
-
-                entity.Property(e => e.Total).HasColumnName("total");
             });
 
             modelBuilder.Entity<Customer>(entity =>

@@ -40,7 +40,7 @@ namespace pallgree_app
 
             if (check)
             {
-                Program.SetMainForm(new Home_admin());
+                Program.SetMainForm(new Home_admin(username));
                 Program.ShowMainForm();
                 this.Close();
             }

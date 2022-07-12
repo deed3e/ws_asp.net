@@ -11,9 +11,11 @@ namespace pallgree_app.Views
     public partial class Home_admin : Form
     {
         bool isFisrtChange = false; 
-        public Home_admin()
+        String user_name;
+        public Home_admin(String user)
         {
             InitializeComponent();
+            user_name = user;
         }
 
         private void LoadTable() 
@@ -143,6 +145,7 @@ namespace pallgree_app.Views
         {
             TableView emp = new TableView();
             emp.Show();
+            emp.FormClosed += TableView_FormClosed;
 
         }
 
@@ -301,7 +304,7 @@ namespace pallgree_app.Views
                 }
 
                 if (condition) {
-                    CheckOutView emp = new CheckOutView(idBill,table);
+                    CheckOutView emp = new CheckOutView(idBill,table,user_name);
                     emp.Show();
                     emp.FormClosed += Emp_FormClosed;
                 }
@@ -316,6 +319,11 @@ namespace pallgree_app.Views
         }
 
         private void Home_admin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LoadTable();
+        }
+
+        private void TableView_FormClosed(object sender, FormClosedEventArgs e)
         {
             LoadTable();
         }

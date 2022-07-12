@@ -19,11 +19,13 @@ namespace pallgree_app.Views
         int discount = 0;
         double total = 0;
         int idTable;
-        public CheckOutView(int _idBill, int _idTable)
+        String user_name ="";
+        public CheckOutView(int _idBill, int _idTable,String user)
         {
             InitializeComponent();
             idBill = _idBill;
             idTable = _idTable;
+            user_name = user;
 
 
         }
@@ -57,7 +59,9 @@ namespace pallgree_app.Views
                 textBox3.Text = tax.ToString()+" Usd";
             
             }
-            }
+            total = tmpTotal + tax ;
+            textBox6.Text = total.ToString() + " Usd";
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -89,6 +93,7 @@ namespace pallgree_app.Views
             textBox5.Text = discount.ToString()+"%";
             double discount2= Math.Round((tmpTotal * ((double)discount/100)), 2);
             total = tmpTotal + tax - discount2;
+            total = Math.Round(total, 2);
             textBox6.Text = total.ToString()+" Usd";
         }
 
@@ -126,6 +131,9 @@ namespace pallgree_app.Views
                         if (x.Id == idBill)
                         {
                             x.Status = 2;
+                            x.EmployeeCheckout = user_name;
+                            x.TimeCheckout = DateTime.Now;
+                            x.Total = total;
                             context.Bills.Update(x);
                         }
                     });

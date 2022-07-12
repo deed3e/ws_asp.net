@@ -12,6 +12,7 @@ namespace pallgree_app.Models
         public DateTime TimeCheckin { get; set; }
         public DateTime? TimeCheckout { get; set; }
         public int Status { get; set; }
-        public int? EmployeeCheckout { get; set; }
+        public string EmployeeCheckout { get; set; }
+        public double Total { get; set; }
     }
 }
